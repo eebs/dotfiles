@@ -2,3 +2,6 @@
 alias gs="git status"
 alias gc="git commit"
 alias gg="git log"
+
+# GPG
+alias gpg="gpg2"
