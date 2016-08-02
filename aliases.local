@@ -5,3 +5,6 @@ alias gg="git log"
 
 # GPG
 alias gpg="gpg2"
+
+# Sublime
+alias s="subl"
