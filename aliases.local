@@ -1,0 +1,4 @@
+# Git shortcuts
+alias gs="git status"
+alias gc="git commit"
+alias gg="git log"
