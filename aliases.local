@@ -8,3 +8,6 @@ alias gpg="gpg2"
 
 # Sublime
 alias s="subl"
+
+# Local dotfiles
+alias rcupl="rcup -d ~/code/eebs/dotfiles -x README.md"
