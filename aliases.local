@@ -11,3 +11,5 @@ alias s="subl"
 
 # Local dotfiles
 alias rcupl="rcup -d ~/code/eebs/dotfiles -x README.md"
+
+alias trust="mkdir -p .git/safe"
