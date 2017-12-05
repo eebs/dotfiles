@@ -2,6 +2,6 @@
   name = Eebs Kobeissi
   email = ebrahim.kobeissi@gmail.com
 [commit]
-  gpgsign = true
+  gpgsign = false
 [gpg]
   program = gpg2
