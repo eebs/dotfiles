@@ -8,7 +8,7 @@ bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded"
 bind C-l send-keys C-l
 
 set -g set-titles on
-set -g set-titles-string "tmux:#I #W"
+set -g set-titles-string "#S #I:#W"
 
 set-option -g status-right "#(date '+%a, %b %d - %I:%M') "
 
