@@ -2,6 +2,9 @@
 alias gs="git status"
 alias gc="git commit"
 alias gg="git log"
+alias gsu="git stash -u"
+alias gsp="git stash pop"
+alias grc="git rebase --continue"
 
 # GPG
 alias gpg="gpg2"
