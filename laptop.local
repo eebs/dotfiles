@@ -1,5 +1,7 @@
 fancy_echo "In local laptop file"
 
+brew "chromedriver"
+
 # Show battery percent
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 
