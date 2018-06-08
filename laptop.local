@@ -1,7 +1,9 @@
 fancy_echo "In local laptop file"
 
-brew "chromedriver"
+brew bundle --file=- <<EOF
+cask "chromedriver"
 brew "git-flow"
+EOF
 
 # Show battery percent
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
