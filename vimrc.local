@@ -24,3 +24,7 @@ nmap <Leader>w :ccl<cr>
 
 " Find by tag
 nnoremap <Leader>. :CtrlPTag<cr>
+
+" Move between wrapped lines, rather than jumping over wrapped segments
+nmap j gj
+nmap k gk
