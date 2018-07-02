@@ -39,3 +39,16 @@ bind -n S-Up resize-pane -U 2
 
 # Allow scrolling with the mouse
 set -g mouse on
+
+# https://medium.freecodecamp.org/tmux-in-practice-scrollback-buffer-47d5ffa71c93
+# Do not copy selection and cancel copy mode on drag end event
+# Prefer iTerm style selection: select, then mouse click to copy to buffer
+
+unbind -T copy-mode-vi MouseDragEnd1Pane
+bind -T copy-mode-vi MouseDown1Pane select-pane \;\
+  send-keys -X copy-pipe "pbcopy" \;\
+    send-keys -X clear-selection
+
+bind p paste-buffer
+bind C-p choose-buffer
+
