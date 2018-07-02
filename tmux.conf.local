@@ -37,11 +37,5 @@ bind -n S-Right resize-pane -R 2
 bind -n S-Down resize-pane -D 1
 bind -n S-Up resize-pane -U 2
 
-# Selecting panes
-bind-key -n C-h select-pane -L
-bind-key -n C-j select-pane -D
-bind-key -n C-k select-pane -U
-bind-key -n C-l select-pane -R
-
 # Allow scrolling with the mouse
 set -g mouse on
