@@ -1,0 +1,26 @@
+" Editing and reloading of .vimrc
+
+nmap <leader>vr :sp ~/dotfiles-local/vimrc.local<cr>
+nmap <leader>so :source $MYVIMRC<cr>
+
+" Allow jumping to the beginning of an indented line
+
+nmap 0 ^
+
+" Quick escape back to normal mode
+
+imap jk <esc>
+imap kj <esc>
+
+" Indent all lines
+
+map <Leader>i mmgg=G`m
+
+" Make test commands execute using dispatch.vim
+let test#strategy = "dispatch"
+
+" Closing of QuickFix window
+nmap <Leader>w :ccl<cr>
+
+" Find by tag
+nnoremap <Leader>. :CtrlPTag<cr>
