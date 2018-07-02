@@ -3,6 +3,7 @@ fancy_echo "In local laptop file"
 brew bundle --file=- <<EOF
 cask "chromedriver"
 brew "git-flow"
+cask "graphiql"
 EOF
 
 # Show battery percent
