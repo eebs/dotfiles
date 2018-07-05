@@ -8,6 +8,7 @@ alias gsp="git stash pop"
 alias grc="git rebase --continue"
 alias grs="git rebase --skip"
 alias hs="hub sync"
+alias gco="git checkout"
 
 # Laptop
 alias macup="sh ~/code/thoughtbot/laptop/mac 2>&1 | tee ~/laptop.log"
