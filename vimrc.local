@@ -28,3 +28,9 @@ nnoremap <Leader>. :CtrlPTag<cr>
 " Move between wrapped lines, rather than jumping over wrapped segments
 nmap j gj
 nmap k gk
+
+" Edit another file in the same directory as the current file
+" uses expression to extract path from current file's path
+map <Leader>e :e <C-R>=escape(expand("%:p:h"),' ') . '/'<CR>
+map <Leader>s :split <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
+map <Leader>v :vnew <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
