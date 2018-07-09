@@ -1,2 +1,4 @@
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-dispatch'
+Plug 'joshdick/onedark.vim'
+Plug 'itchyny/lightline.vim'
