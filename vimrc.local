@@ -19,6 +19,12 @@ set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
+if &t_Co > 2 || has("gui_running")
+  set hlsearch
+endif
+
+" Use C-Space to Esc out of search
+noremap <C-h> :noh<cr>
 
 " Editing and reloading of .vimrc
 nmap <leader>vr :sp ~/dotfiles-local/vimrc.local<cr>
