@@ -23,6 +23,11 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
 
+" Search insensitively when searching for only lowercase letters
+" Search sensitively when searching with uppercase letters
+set ignorecase
+set smartcase
+
 " Use C-Space to Esc out of search
 noremap <C-h> :noh<cr>
 
