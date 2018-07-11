@@ -35,7 +35,7 @@ autocmd BufWritePre * %s/\s\+$//e
 let test#strategy = "dispatch"
 
 " Use C-Space to Esc out of search
-noremap <C-h> :noh<cr>
+noremap <Leader>h :noh<cr>
 
 " Editing and reloading of .vimrc
 nmap <Leader>vr :sp ~/dotfiles-local/vimrc.local<cr>
