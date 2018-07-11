@@ -54,6 +54,7 @@ nmap k gk
 
 " Indent all lines
 map <Leader>i mmgg=G`m
+map <Leader>p :set paste<CR><esc>"*]p:set nopaste<cr>
 
 " Closing of QuickFix window
 nmap <Leader>w :ccl<cr>
