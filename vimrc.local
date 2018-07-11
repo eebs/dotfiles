@@ -32,8 +32,8 @@ set smartcase
 noremap <C-h> :noh<cr>
 
 " Editing and reloading of .vimrc
-nmap <leader>vr :sp ~/dotfiles-local/vimrc.local<cr>
-nmap <leader>so :source $MYVIMRC<cr>
+nmap <Leader>vr :sp ~/dotfiles-local/vimrc.local<cr>
+nmap <Leader>so :source $MYVIMRC<cr>
 
 " Allow jumping to the beginning of an indented line
 nmap 0 ^
