@@ -34,6 +34,13 @@ autocmd BufWritePre * %s/\s\+$//e
 " Make test commands execute using dispatch.vim
 let test#strategy = "dispatch"
 
+" Unmap quicker window movement, this is now handled in tmux.conf via
+" vim-tmux-navigator
+unmap <C-j>
+unmap <C-k>
+unmap <C-h>
+unmap <C-l>
+
 " Use C-Space to Esc out of search
 noremap <Leader>h :noh<cr>
 
