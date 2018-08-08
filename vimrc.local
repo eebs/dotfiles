@@ -59,6 +59,7 @@ nmap 0 ^
 " Quick escape back to normal mode
 imap jk <esc>
 imap kj <esc>
+imap jj <esc>
 
 " Move between wrapped lines, rather than jumping over wrapped segments
 nmap j gj
@@ -77,6 +78,6 @@ nnoremap <Leader>. :CtrlPTag<cr>
 " Edit another file in the same directory as the current file
 " uses expression to extract path from current file's path
 map <Leader>e :e <C-R>=escape(expand("%:p:h"),' ') . '/'<CR>
-map <Leader>s :split <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
+map <Leader>sp :split <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
 map <Leader>v :vnew <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
 
