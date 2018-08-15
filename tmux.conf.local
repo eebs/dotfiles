@@ -20,6 +20,7 @@ set-option -g status-keys "emacs"
 
 # Allow the session name in status left to display up to 50 characters
 set-option -g status-left-length 50
+set-option -g status-right-length 80 # default 40
 
 # Break out the current pane to a window
 bind b break-pane -d
