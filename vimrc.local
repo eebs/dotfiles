@@ -30,6 +30,7 @@ set smartcase
 
 " Remove trailing whitespace
 autocmd BufWritePre * %s/\s\+$//e
+nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:retab<CR>
 
 " Make test commands execute using dispatch.vim
 let test#strategy = "dispatch"
