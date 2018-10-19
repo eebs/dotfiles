@@ -5,6 +5,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'elmcast/elm-vim'
 Plug 'jiangmiao/auto-pairs'
+Plug 'christoomey/gsub.vim'
 Plug 'mitermayer/vim-prettier', {
       \ 'do': 'yarn install',
       \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss'] }
