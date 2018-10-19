@@ -22,6 +22,13 @@ set-option -g status-right-length 80 # default 40
 # Break out the current pane to a window
 bind b break-pane -d
 
+# Fuzzy find for switching sessions
+bind s split-window -v "tmux list-sessions | sed -E 's/:.*$//' | grep -v \"^$(tmux display-message -p '#S')\$\" | fzf --reverse | xargs tmux switch-client -t"
+
+# Quick session switching back and forth. I never use the built in layouts
+# # (default mapping for Space), so I reclaimed the key for this
+bind-key Space switch-client -l
+
 # Commands for new splits
 bind | split-window -h -c '#{pane_current_path}'
 bind \ split-window -h -c '#{pane_current_path}'
