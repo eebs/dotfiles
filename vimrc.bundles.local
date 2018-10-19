@@ -8,3 +8,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'mitermayer/vim-prettier', {
       \ 'do': 'yarn install',
       \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss'] }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+UnPlug 'ctrlp.vim'

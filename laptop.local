@@ -6,6 +6,7 @@ cask "chromedriver"
 brew "git-flow"
 cask "graphiql"
 cask "slowquitapps"
+brew "fzf"
 EOF
 
 # Show battery percent

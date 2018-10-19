@@ -47,6 +47,12 @@ unmap <C-k>
 unmap <C-h>
 unmap <C-l>
 
+" Maps ctrl+p to open fuzzy search via FZF
+nnoremap <c-p> :Files<cr>
+
+" show hidden files and hide gitignored files
+let $FZF_DEFAULT_COMMAND = 'ag -g "" --hidden'
+
 " Use C-Space to Esc out of search
 noremap <Leader>h :noh<cr>
 
