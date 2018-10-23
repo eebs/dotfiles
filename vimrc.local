@@ -28,6 +28,8 @@ unmap <C-k>
 unmap <C-h>
 unmap <C-l>
 
+" automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =
 
 " Use C-Space to Esc out of search
 noremap <Leader>h :noh<cr>
