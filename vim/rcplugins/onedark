@@ -1,0 +1,5 @@
+" A dark Vim/Neovim color scheme inspired by Atom's One Dark syntax theme.
+
+Plug 'joshdick/onedark.vim'
+
+" vim:ft=vim
