@@ -17,6 +17,9 @@ endif
 set ignorecase
 set smartcase
 
+" Use relative numbering
+set relativenumber
+
 " Remove trailing whitespace
 autocmd BufWritePre * %s/\s\+$//e
 nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:retab<CR>
