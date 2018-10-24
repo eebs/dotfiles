@@ -1,0 +1,8 @@
+" Unmap quicker window movement, this is now handled in tmux.conf via
+" vim-tmux-navigator
+unmap <C-j>
+unmap <C-k>
+unmap <C-h>
+unmap <C-l>
+
+" vim:ft=vim

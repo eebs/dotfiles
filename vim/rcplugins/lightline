@@ -13,4 +13,7 @@ let g:lightline = {
       \ },
       \ }
 
+" Don't show the mode line
+set noshowmode
+
 " vim:ft=vim

@@ -1,0 +1,11 @@
+" Remove trailing whitespace
+autocmd BufWritePre * %s/\s\+$//e
+nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:retab<CR>
+
+" Edit another file in the same directory as the current file
+" uses expression to extract path from current file's path
+map <Leader>e :e <C-R>=escape(expand("%:p:h"),' ') . '/'<CR>
+map <Leader>sp :split <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
+map <Leader>v :vnew <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
+
+" vim:ft=vim

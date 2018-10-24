@@ -1,71 +1,10 @@
-" Color scheme
-colorscheme onedark
+function! s:SourceConfigFilesIn(directory)
+  let directory_splat = '~/.vim/' . a:directory . '/*'
+  for config_file in split(glob(directory_splat), '\n')
+    if filereadable(config_file)
+      execute 'source' config_file
+    endif
+  endfor
+endfunction
 
-set noshowmode
-
-" 24 bit color
-set termguicolors
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-
-if &t_Co > 2 || has("gui_running")
-  set hlsearch
-endif
-
-" Search insensitively when searching for only lowercase letters
-" Search sensitively when searching with uppercase letters
-set ignorecase
-set smartcase
-
-" Use relative numbering
-set relativenumber
-
-" Remove trailing whitespace
-autocmd BufWritePre * %s/\s\+$//e
-nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:retab<CR>
-
-" Unmap quicker window movement, this is now handled in tmux.conf via
-" vim-tmux-navigator
-unmap <C-j>
-unmap <C-k>
-unmap <C-h>
-unmap <C-l>
-
-" automatically rebalance windows on vim resize
-autocmd VimResized * :wincmd =
-
-" Use C-Space to Esc out of search
-noremap <Leader>h :noh<cr>
-
-" Editing and reloading of .vimrc
-nmap <Leader>vr :sp ~/dotfiles-local/vimrc.local<cr>
-nmap <Leader>so :source $MYVIMRC<cr>
-
-" Allow jumping to the beginning of an indented line
-nmap 0 ^
-
-" Quick escape back to normal mode
-imap jk <esc>
-imap kj <esc>
-imap jj <esc>
-
-" Move between wrapped lines, rather than jumping over wrapped segments
-nmap j gj
-nmap k gk
-
-" Indent all lines
-map <Leader>i mmgg=G`m
-map <Leader>p :set paste<CR><esc>"*]p:set nopaste<cr>
-
-" Closing of QuickFix window
-nmap <Leader>w :ccl<cr>
-
-" Find by tag
-nnoremap <Leader>. :CtrlPTag<cr>
-
-" Edit another file in the same directory as the current file
-" uses expression to extract path from current file's path
-map <Leader>e :e <C-R>=escape(expand("%:p:h"),' ') . '/'<CR>
-map <Leader>sp :split <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
-map <Leader>v :vnew <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
-
+call s:SourceConfigFilesIn('rcfiles')
