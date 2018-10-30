@@ -1,6 +1,7 @@
 [user]
   name = Eebs Kobeissi
   email = ebrahim.kobeissi@gmail.com
+  signingkey = E5A3B44A7D49B280
 [commit]
   gpgsign = false
 [gpg]
