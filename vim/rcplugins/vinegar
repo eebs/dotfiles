@@ -1,0 +1,5 @@
+" Enhanced netrw
+
+Plug 'tpope/vim-vinegar'
+
+" vim:ft=vim
