@@ -1,0 +1,6 @@
+" Asynchronous linting. Plugin is installed by thoughtbot/dotfiles
+
+nmap <leader>ah :ALEHover<cr>
+nmap <leader>ad :ALEDetail<cr>
+
+" vim:ft=vim
