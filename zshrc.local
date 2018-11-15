@@ -1,5 +1,4 @@
-PATH=".git/safe/../../node_modules/.bin:$PATH"
-
-export -U PATH
+# Common zsh configuration goes here.
+# Plugin or functionality specific configuration in zsh/configs
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
