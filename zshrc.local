@@ -6,3 +6,5 @@
 # true, but the `source ~/.fzf.zsh` doesn't do anything. Leaving it here works
 # for whatever reason.
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+ensure_tmux_is_running
