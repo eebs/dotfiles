@@ -10,7 +10,7 @@ bind C-l send-keys C-l
 set -g set-titles on
 set -g set-titles-string "#S #I:#W"
 
-set-option -g status-right "#(tmux-spotify-info) | #(date '+%a, %b %d - %I:%M') "
+set-option -g status-right "#S | #(tmux-spotify-info) | #(date '+%a, %b %d - %I:%M') "
 
 # Use emacs / readline key-bindings in the tmux command prompt
 set-option -g status-keys "emacs"
