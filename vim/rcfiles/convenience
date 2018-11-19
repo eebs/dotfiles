@@ -31,8 +31,8 @@ nnoremap <leader>df :Files ~/dotfiles-local<cr>
 nnoremap 0 ^
 nnoremap ^ 0
 
-" Closing of QuickFix window
-nmap <Leader>w :ccl<cr>
+" Closing of QuickFix or Preview windows
+nmap <Leader>w :cclose<cr>:pclose<cr>
 
 " Indent all lines
 map <Leader>i mmgg=G`m
