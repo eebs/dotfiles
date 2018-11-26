@@ -3,4 +3,6 @@
 nmap <leader>ah :ALEHover<cr>
 nmap <leader>ad :ALEDetail<cr>
 
+let g:ale_echo_msg_format = '[%severity%] [%linter%] %code: %%s'
+
 " vim:ft=vim
