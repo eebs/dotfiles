@@ -3,8 +3,8 @@
 Plug 'christoomey/gsub.vim'
 
 " Mappings to search for the <cword> or visual highlight, and run Gsearch
-nmap K *:Gsearch<cr>
-vmap K *:Gsearch<cr>
+nmap <leader>K *:Gsearch<cr>
+vmap <leader>K *:Gsearch<cr>
 
 autocmd FileType gsub nnoremap <buffer> <cr><cr> :Gsub<cr>
 

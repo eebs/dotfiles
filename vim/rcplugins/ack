@@ -12,8 +12,8 @@ function! s:VisualAck()
   execute "Ack! '" . escaped_pattern . "'"
 endfunction
 
-nnoremap C :Ack! '<C-r><C-w>'<cr>
-vnoremap C :<C-u>call <sid>VisualAck()<cr>
+nnoremap K :Ack! '<C-r><C-w>'<cr>
+vnoremap K :<C-u>call <sid>VisualAck()<cr>
 
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
