@@ -1,0 +1,5 @@
+" Shows a git diff in the gutter and stages/undoes hunks.
+
+Plug 'airblade/vim-gitgutter'
+
+" vim:ft=vim
