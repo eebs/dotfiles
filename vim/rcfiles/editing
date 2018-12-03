@@ -2,6 +2,9 @@
 autocmd BufWritePre * %s/\s\+$//e
 nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:retab<CR>
 
+" Don't automatically continue comments when pressin 'o' on comment line
+autocmd FileType * setlocal formatoptions-=o
+
 " Edit another file in the same directory as the current file
 " uses expression to extract path from current file's path
 map <Leader>e :e <C-R>=escape(expand("%:p:h"),' ') . '/'<CR>
