@@ -2,4 +2,6 @@
 
 Plug 'airblade/vim-gitgutter'
 
+map <C-g> :GitGutterToggle<cr>
+
 " vim:ft=vim
