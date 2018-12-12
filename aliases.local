@@ -23,3 +23,5 @@ alias gpg="gpg2"
 alias s="subl"
 
 alias trust="mkdir -p .git/safe"
+
+alias fucknode="rm -rf node_modules && npm install && echo `date` >> ~/fucknode.txt"
