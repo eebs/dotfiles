@@ -2,6 +2,9 @@
   name = Eebs Kobeissi
   email = ebrahim.kobeissi@gmail.com
   signingkey = E5A3B44A7D49B280
+[alias]
+  cpr = !git close-pull-request
+  cne = commit --amend --no-edit
 [commit]
   gpgsign = false
 [gpg]

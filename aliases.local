@@ -1,6 +1,6 @@
 # Git shortcuts
 alias git="hub"
-alias gs="git status"
+alias gs="git status --short --branch"
 alias gc="git commit"
 alias gg="git log"
 alias gsu="git stash -u"
