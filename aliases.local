@@ -2,7 +2,7 @@
 alias git="hub"
 alias gs="git status --short --branch"
 alias gc="git commit"
-alias gg="git log"
+alias gg="git sl"
 alias gsu="git stash -u"
 alias gsp="git stash pop"
 alias grc="git rebase --continue"
