@@ -3,7 +3,6 @@
 " Display relative line numbers, with absolute line number for current line
 set number
 set numberwidth=5
-set relativenumber
 
 " Might want this?
 " set formatoptions-=t " Don't auto-break long lines (re-enable this for prose)
