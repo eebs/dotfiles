@@ -38,4 +38,7 @@ nmap <Leader>w :cclose<cr>:pclose<cr>
 map <Leader>i mmgg=G`m
 map <Leader>p :set paste<CR><esc>"*]p:set nopaste<cr>
 
+" Search history
+nmap <C-f> :History:<cr>
+
 " vim:ft=vim
