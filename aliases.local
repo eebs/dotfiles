@@ -10,6 +10,8 @@ alias grs="git rebase --skip"
 alias hs="hub sync"
 alias gco="git checkout"
 
+alias gdr="git diff-tree --diff-filter=d -r --no-commit-id --name-only origin/master head | xargs"
+
 # Laptop
 alias macup="sh ~/code/thoughtbot/laptop/mac 2>&1 | tee ~/laptop.log"
 
