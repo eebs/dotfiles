@@ -1,15 +1,6 @@
 # Git shortcuts
 alias git="hub"
 alias gs="git status --short --branch"
-alias gc="git commit"
-alias gg="git sl"
-alias gsu="git stash -u"
-alias gsp="git stash pop"
-alias grc="git rebase --continue"
-alias grs="git rebase --skip"
-alias hs="hub sync"
-alias gco="git checkout"
-
 alias gdr="git diff-tree --diff-filter=d -r --no-commit-id --name-only origin/master head | xargs"
 
 # Laptop
