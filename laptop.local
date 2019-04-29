@@ -8,6 +8,7 @@ cask "graphiql"
 cask "slowquitapps"
 cask "alacritty"
 brew "fzf"
+brew "gitsh"
 EOF
 
 # Show battery percent

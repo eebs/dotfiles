@@ -12,3 +12,8 @@
   gpgsign = false
 [gpg]
   program = gpg2
+[gitsh]
+  defaultcommand = status -sb
+  gitcommand = hub
+  nogreeting = true
+  prompt = "\n%D %c(%b%#)%w ➜"
