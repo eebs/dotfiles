@@ -9,6 +9,7 @@ cask "slowquitapps"
 cask "alacritty"
 brew "fzf"
 brew "gitsh"
+brew "ripgrep"
 EOF
 
 # Show battery percent

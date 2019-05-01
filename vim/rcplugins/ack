@@ -15,6 +15,8 @@ endfunction
 nnoremap K :Ack! '<C-r><C-w>'<cr>
 vnoremap K :<C-u>call <sid>VisualAck()<cr>
 
-let g:ackprg = 'ag --nogroup --nocolor --column'
+if executable('rg')
+  let g:ackprg = 'rg --vimgrep'
+endif
 
 " vim:ft=vim

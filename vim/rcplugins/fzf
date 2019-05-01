@@ -12,7 +12,7 @@ let g:fzf_files_options =
 nnoremap <c-p> :Files<cr>
 
 " show hidden files and hide gitignored files
-let $FZF_DEFAULT_COMMAND = 'ag -g "" --hidden'
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 
 let branch_files_options = { 'source': 'branch_files' }
 let uncommited_files_options = { 'source': 'branch_files -w' }
