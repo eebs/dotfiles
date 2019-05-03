@@ -153,7 +153,7 @@ def show_proposal_for_git_head(prefix=None):
         print 'Nothing to do'
     else:
         print 'Proposal:'
-        print "GIT_COMMITTER_DATE='%(committer_date)s' git commit --amend -C HEAD --date='%(author_date)s'" % values
+        print "!env GIT_COMMITTER_DATE='%(committer_date)s' git commit --amend -C HEAD --date='%(author_date)s'" % values
 
 def main():
     try:
