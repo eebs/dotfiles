@@ -6,8 +6,6 @@ Plug 'mitermayer/vim-prettier', {
 
 " Disable auto formatting of files that have '@format' tag
 let g:prettier#autoformat = 0
-" Running before saving async
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.graphql,*.md,*.vue PrettierAsync
 
 " By default parsing errors will open the quickfix but can also be disabled
 " This may be nice to set if the quickfix becomes annoying
