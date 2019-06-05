@@ -8,6 +8,9 @@ let g:fzf_files_options =
   \ '--reverse ' .
   \ '--preview "(coderay {} || cat {}) 2> /dev/null | head -'.&lines.'"'
 
+let g:fzf_commits_log_options =
+  \ '--graph --color=always --format="%C(auto)%h%d %s - %an %C(black)%C(bold)%cr"'
+
 " Maps ctrl+p to open fuzzy search via FZF
 nnoremap <c-p> :Files<cr>
 
@@ -39,5 +42,6 @@ nnoremap <leader>gj :Files app/assets/javascripts/<cr>
 nnoremap <leader>gs :Files spec/<cr>
 
 nnoremap <leader>gb :Buffers<cr>
+nnoremap <leader>gg :Commits<cr>
 
 " vim:ft=vim
