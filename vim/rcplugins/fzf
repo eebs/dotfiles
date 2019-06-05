@@ -38,4 +38,6 @@ nnoremap <leader>gy :Files app/assets/stylesheets/<cr>
 nnoremap <leader>gj :Files app/assets/javascripts/<cr>
 nnoremap <leader>gs :Files spec/<cr>
 
+nnoremap <leader>gb :Buffers<cr>
+
 " vim:ft=vim
