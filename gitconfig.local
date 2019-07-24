@@ -17,7 +17,9 @@
   up = !git fetch origin && git rebase origin/master
   dic = diff --cached
   ps = push
+  psu = push -u
   npr = !git push -u && hub pull-request
+  wip = !git add -A && git commit -m "wip"
 [commit]
   gpgsign = false
 [gpg]
