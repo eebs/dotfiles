@@ -40,6 +40,8 @@ bind s split-window -v "tmux list-sessions | sed -E 's/:.*$//' | grep -v \"^$(tm
 # # (default mapping for Space), so I reclaimed the key for this
 bind-key Space switch-client -l
 
+bind-key t run-shell -b 'gittower .'
+
 # Commands for new splits
 bind | split-window -h -c '#{pane_current_path}'
 bind \ split-window -h -c '#{pane_current_path}'
