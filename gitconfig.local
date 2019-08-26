@@ -6,7 +6,7 @@
   cpr = !git close-pull-request
   ca = commit --amend
   cne = commit --amend --no-edit
-  s = stash -u
+  su = stash -u
   sp = stash pop
   rc = rebase --continue
   rs = rebase --skipt
@@ -20,6 +20,8 @@
   psu = push -u
   npr = !git push -u && hub pull-request
   wip = !git add -A && git commit -m "wip"
+  sc = switch -c
+  s = switch
 [commit]
   gpgsign = false
 [gpg]
