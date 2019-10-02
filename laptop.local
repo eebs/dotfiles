@@ -2,7 +2,6 @@ fancy_echo "In local laptop file"
 
 brew bundle --file=- <<EOF
 tap "dteoh/sqa"
-cask "chromedriver"
 brew "git-flow"
 cask "graphiql"
 cask "slowquitapps"
