@@ -8,5 +8,3 @@ function! s:SourceConfigFilesIn(directory)
 endfunction
 
 call s:SourceConfigFilesIn('rcplugins')
-
-UnPlug 'ctrlp.vim'

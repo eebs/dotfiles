@@ -1,5 +1,7 @@
 " fzf - the fuzzy finder of all the things
 
+" Have to do this because the conditional in thoughtbot/dotfiles for these
+" plugins evaluates to true even if the homebrew version is not installed.
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
