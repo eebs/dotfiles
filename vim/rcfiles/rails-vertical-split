@@ -1,0 +1,11 @@
+" Use Vim's built-in CTRL-R_CTRL-F when no plugin has claimed <Plug><cfile>
+if empty(maparg('<Plug><cfile>', 'c'))
+  cnoremap <Plug><cfile> <C-R><C-F>
+endif
+
+" Helper map to pass the count (e.g., 2gf) to the underlying command
+nnoremap <SID>: :<C-U><C-R>=v:count ? v:count : ''<CR>
+" Map <Leader>gf to vertical split
+nmap <Leader>gf <SID>:vert sfind <Plug><cfile><CR>
+
+" vim:ft=vim
