@@ -41,6 +41,7 @@ bind s split-window -v "tmux list-sessions | sed -E 's/:.*$//' | grep -v \"^$(tm
 bind-key Space switch-client -l
 
 bind-key t run-shell -b 'gittower .'
+bind-key i new-session -s 'irc'
 
 # Commands for new splits
 bind | split-window -h -c '#{pane_current_path}'
