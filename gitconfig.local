@@ -9,7 +9,7 @@
   su = stash -u
   sp = stash pop
   rc = rebase --continue
-  rs = rebase --skipt
+  rs = rebase --skip
   ra = rebase --abort
   sl = log --oneline --decorate -20
   sla = log --oneline --decorate --graph --all -20
