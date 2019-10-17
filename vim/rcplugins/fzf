@@ -1,10 +1,5 @@
 " fzf - the fuzzy finder of all the things
 
-" Have to do this because the conditional in thoughtbot/dotfiles for these
-" plugins evaluates to true even if the homebrew version is not installed.
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-
 " Show files in reverse order, and show preview
 let g:fzf_files_options =
   \ '--reverse ' .
@@ -12,9 +7,6 @@ let g:fzf_files_options =
 
 let g:fzf_commits_log_options =
   \ '--graph --color=always --format="%C(auto)%h%d %s - %an %C(black)%C(bold)%cr"'
-
-" Maps ctrl+p to open fuzzy search via FZF
-nnoremap <c-p> :Files<cr>
 
 " show hidden files and hide gitignored files
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
