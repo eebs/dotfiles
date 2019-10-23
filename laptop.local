@@ -9,6 +9,7 @@ cask "alacritty"
 brew "gitsh"
 brew "ripgrep"
 brew "diff-so-fancy"
+brew "git-secrets"
 EOF
 
 # Show battery percent
