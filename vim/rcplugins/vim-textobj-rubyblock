@@ -1,0 +1,5 @@
+" A custom text object for selecting ruby blocks.
+
+Plug 'nelstrom/vim-textobj-rubyblock'
+
+" vim:ft=vim
