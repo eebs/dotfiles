@@ -89,11 +89,11 @@ def subprocess_check_output(cmd, **kwargs):
         return output
 
 def load_git_commit(commit_id):
-    return subprocess_check_output(['git', 'cat-file', 'commit', commit_id])
+    return subprocess_check_output(['git', 'cat-file', 'commit', commit_id], text=True)
 
 def git_commit_hash(commit):
     object = 'commit %i\x00%s' % (len(commit), commit)
-    return hashlib.sha1(object).hexdigest()
+    return hashlib.sha1(object.encode('utf-8')).hexdigest()
 
 def commit_line_to_format(line, aggregate_values):
     format_words = line.replace('%', '%%').split(' ')
@@ -118,8 +118,8 @@ def find_beautiful_git_hash(old_commit, prefix, max_minutes=30):
     if prefix.lstrip(ALLOWED_PREFIX_CHARACTERS) != '':
         raise Exception('Invalid prefix! Only lower case hex digits are allowed: ' + ALLOWED_PREFIX_CHARACTERS)
     commit_format, old_values = commit_to_format(old_commit)
-    for committer_date_offset in xrange(max_minutes * 60 + 1):
-        for author_date_offset in xrange(committer_date_offset + 1):
+    for committer_date_offset in range(max_minutes * 60 + 1):
+        for author_date_offset in range(committer_date_offset + 1):
             new_values = {
                 'author_date_timestamp': old_values['author_date_timestamp'] + author_date_offset,
                 'committer_date_timestamp': old_values['committer_date_timestamp'] + committer_date_offset,
@@ -150,10 +150,10 @@ def show_proposal_for_git_head(prefix=None):
     old_commit = load_git_commit('HEAD')
     values = find_beautiful_git_hash(old_commit, prefix)
     if values is None:
-        print 'Nothing to do'
+        print('Nothing to do')
     else:
-        print 'Proposal:'
-        print "!env GIT_COMMITTER_DATE='%(committer_date)s' git commit --amend -C HEAD --date='%(author_date)s' -q" % values
+        print('Proposal:')
+        print("!env GIT_COMMITTER_DATE='%(committer_date)s' git commit --amend -C HEAD --date='%(author_date)s' -q" % values)
 
 def main():
     try:
