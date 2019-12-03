@@ -14,7 +14,6 @@ function! HelpFileMode()
 endfunction
 
 nnoremap <leader>rh :h local-additions<cr>
-nnoremap <leader>h :h '<C-r><C-w>'<cr>
+nnoremap <leader>h :h <C-r><C-w><cr>
 
 " vim:ft=vim
-

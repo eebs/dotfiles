@@ -1,0 +1,5 @@
+#!/bin/sh
+
+beautify_git_hash "eeb5" | sed -n 2p | pbcopy
+
+.git/hooks/ctags >/dev/null 2>&1 &

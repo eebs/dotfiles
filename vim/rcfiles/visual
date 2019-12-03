@@ -1,14 +1,11 @@
 " Visual Settings
 
-" Enable modeline so we can enable vim file type syntax highlighting.
-" This might be a security concern:
-"
-" https://github.com/thoughtbot/dotfiles/commit/cdc55ef1869c8937ca754c67cebddb293877ad57
-set modeline
-set modelines=1
-
 " Automatically rebalance windows on vim resize
 autocmd VimResized * :wincmd =
+
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
 
 " Color scheme
 colorscheme onedark

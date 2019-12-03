@@ -1,5 +1,8 @@
 " fzf - the fuzzy finder of all the things
 
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
 " Show files in reverse order, and show preview
 let g:fzf_files_options =
   \ '--reverse ' .
@@ -23,6 +26,9 @@ command! BranchFiles call fzf#run(fzf#wrap('BranchFiles',
 
 command! UncommitedFiles call fzf#run(fzf#wrap('UncommitedFiles',
       \ extend(uncommited_files_options, { 'options': s:diff_options }), 0))
+
+" Map Ctrl + p to open fuzzy find
+nnoremap <c-p> :Files<cr>
 
 nnoremap <silent> <leader>gp :BranchFiles<cr>
 nnoremap <silent> <leader>GP :UncommitedFiles<cr>

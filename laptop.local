@@ -2,6 +2,7 @@ fancy_echo "In local laptop file"
 
 brew bundle --file=- <<EOF
 tap "dteoh/sqa"
+tap "Goles/battery"
 brew "git-flow"
 cask "graphiql"
 cask "slowquitapps"
@@ -10,6 +11,8 @@ brew "gitsh"
 brew "ripgrep"
 brew "diff-so-fancy"
 brew "git-secrets"
+brew "neovim"
+brew "battery"
 EOF
 
 # Show battery percent

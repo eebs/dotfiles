@@ -1,1 +1,0 @@
-export -U PATH="$HOME/.bin:.git/safe/../../node_modules/.bin:$PATH"

@@ -1,9 +1,12 @@
 " Asynchronous linting. Plugin is installed by thoughtbot/dotfiles
 
-nmap <leader>ah :ALEHover<cr>
-nmap <leader>ad :ALEDetail<cr>
+UnPlug 'ale'
 
-let g:ale_echo_msg_format = '[%severity%] [%linter%] %code: %%s'
-let g:ale_linters = {'ruby': []}
+silent! augroup! ale
+" nmap <leader>ah :ALEHover<cr>
+" nmap <leader>ad :ALEDetail<cr>
+"
+" let g:ale_echo_msg_format = '[%severity%] [%linter%] %code: %%s'
+" let g:ale_linters = {'ruby': []}
 
 " vim:ft=vim

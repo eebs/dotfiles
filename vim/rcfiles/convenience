@@ -1,5 +1,8 @@
 " Convenience mappings
 
+" Switch between the last two files
+nnoremap <Leader><Leader> <C-^>
+
 " Move between wrapped lines, rather than jumping over wrapped segments
 nmap j gj
 nmap k gk
@@ -9,13 +12,13 @@ nnoremap <C-Space> <Esc>:noh<CR>
 vnoremap <C-Space> <Esc>gV
 onoremap <C-Space> <Esc>
 cnoremap <C-Space> <C-c>
-inoremap <C-Space> <Esc>
+" inoremap <C-Space> <Esc>
 " Terminal sees <C-@> as <C-space>
 nnoremap <C-@> <Esc>:noh<CR>
 vnoremap <C-@> <Esc>gV
 onoremap <C-@> <Esc>
 cnoremap <C-@> <C-c>
-inoremap <C-@> <Esc>
+" inoremap <C-@> <Esc>
 
 " Quick escape back to normal mode
 imap jk <esc>
