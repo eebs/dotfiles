@@ -44,4 +44,7 @@ map <Leader>p :set paste<CR><esc>"*]p:set nopaste<cr>
 " Search history
 nmap <C-f> :History:<cr>
 
+" Close all buffers
+nmap <Leader>cb :%bd!<cr>
+
 " vim:ft=vim
