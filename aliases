@@ -16,7 +16,6 @@ alias s="rspec"
 alias path='echo $PATH | tr -s ":" "\n"'
 
 # Git shortcuts
-alias git="hub"
 alias gs="git status --short --branch"
 alias gdr="git diff-tree --diff-filter=d -r --no-commit-id --name-only origin/master head | xargs"
 
