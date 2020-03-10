@@ -18,10 +18,6 @@ endfunction
 " This is weird an inserts the text after <cr>
 " inoremap <expr><cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-" You will have bad experience for diagnostic messages when it's default 4000.
-" This is used for CursorHold below
-set updatetime=300
-
 " don't give |ins-completion-menu| messages.
 set shortmess+=c
 

@@ -13,6 +13,9 @@ set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
 
+" Set shorter for coc and vim-gitgutter
+set updatetime=100
+
 " Enable modeline so we can enable vim file type syntax highlighting.
 " This might be a security concern:
 "

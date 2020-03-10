@@ -1,0 +1,23 @@
+" vim-gitgutter - show a git diff in the gutter and stage/undo hunks
+
+Plug 'airblade/vim-gitgutter'
+
+function! GitGutterNextHunkCycle()
+  let line = line('.')
+  silent! GitGutterNextHunk
+  if line('.') == line
+    1
+    GitGutterNextHunk
+  endif
+endfunction
+
+nmap <silent> ]c :call GitGutterNextHunkCycle()<cr>
+
+omap ih <Plug>(GitGutterTextObjectInnerPending)
+omap ah <Plug>(GitGutterTextObjectOutterPending)
+xmap ih <Plug>(GitGutterTextObjectInnerVisual)
+xmap ah <Plug>(GitGutterTextObjectOutterVisual)
+
+let g:gitgutter_use_location_list = 1
+
+" vim:ft=vim
