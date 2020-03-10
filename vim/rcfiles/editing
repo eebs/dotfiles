@@ -1,5 +1,12 @@
 " Remove trailing whitespace
-autocmd BufWritePre * %s/\s\+$//e
+fun! StripTrailingWhitespace()
+    " Don't strip when editing a commit message
+    if &ft =~ 'gitcommit'
+        return
+    endif
+    %s/\s\+$//e
+endfun
+autocmd BufWritePre * call StripTrailingWhitespace()
 nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:retab<CR>
 
 " Don't automatically continue comments when pressin 'o' on comment line
