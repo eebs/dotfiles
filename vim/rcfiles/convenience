@@ -25,6 +25,8 @@ imap jk <esc>
 imap kj <esc>
 imap jj <esc>
 
+nmap <leader>j :w<cr>
+
 " Quick sourcing of the current file, allowing for quick vimrc testing
 nnoremap <leader>sop :source %<cr>
 nnoremap <leader>df :Files ~/dotfiles-local<cr>
