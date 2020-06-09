@@ -1,0 +1,5 @@
+" Ack - Integrates ack (grep replacement) into vim
+
+Plug 'mattn/emmet-vim'
+
+" vim:ft=vim
