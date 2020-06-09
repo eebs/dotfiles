@@ -6,7 +6,6 @@
 .byebug_history
 .env
 .git/
-.tool-versions
 .vimrc.local
 /bower_components/
 /log
