@@ -1,5 +1,8 @@
 " Convenience mappings
 
+" Reload vim configuration
+nnoremap <Leader>vs :source $MYVIMRC<CR> \| :noh<CR> \| :echo "vimrc reloaded"<CR>
+
 " Switch between the last two files
 nnoremap <Leader><Leader> <C-^>
 
