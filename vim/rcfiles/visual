@@ -7,6 +7,9 @@ autocmd VimResized * :wincmd =
 set splitbelow
 set splitright
 
+" Highlight current row under cursor
+set cursorline
+
 " Color scheme
 colorscheme onedark
 
