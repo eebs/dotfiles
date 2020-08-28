@@ -4,7 +4,7 @@
 [user]
   name = Eebs Kobeissi
   email = ebrahim.kobeissi@gmail.com
-  signingkey = "E5A3B44A7D49B280"
+  signingkey = "746808E2F494D120"
 [push]
   default = current
 [color]
@@ -46,7 +46,7 @@
 [merge]
   ff = only
 [commit]
-  gpgsign = false
+  gpgsign = true
   template = ~/.gitmessage
 [fetch]
   prune = true
