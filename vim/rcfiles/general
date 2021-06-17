@@ -26,7 +26,6 @@ set modelines=1
 " Display relative line numbers, with absolute line number for current line
 set number
 set numberwidth=5
-set relativenumber
 
 " Softtabs, 2 spaces
 set tabstop=2
