@@ -48,7 +48,7 @@
 [merge]
   ff = only
 [commit]
-  gpgsign = true
+  gpgsign = false
   template = ~/.gitmessage
 [fetch]
   prune = true
