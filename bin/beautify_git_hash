@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """Beautify the Git commit hash!
 
@@ -153,7 +153,7 @@ def show_proposal_for_git_head(prefix=None):
         print('Nothing to do')
     else:
         print('Proposal:')
-        print("!env GIT_COMMITTER_DATE='%(committer_date)s' git commit --amend -C HEAD --date='%(author_date)s' -q" % values, end = '')
+        print("env GIT_COMMITTER_DATE='%(committer_date)s' git commit --amend -C HEAD --date='%(author_date)s' -q" % values, end = '')
 
 def main():
     try:
