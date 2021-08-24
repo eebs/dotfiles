@@ -1,0 +1,5 @@
+Plug 'tpope/vim-projectionist'
+
+nmap <Leader>av :AV<cr>
+
+" vim:ft=vim
