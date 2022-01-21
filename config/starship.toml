@@ -1,0 +1,50 @@
+[ruby]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold red)"
+
+[directory]
+style = "blue"
+
+[git_branch]
+symbol = ""
+
+[git_metrics]
+disabled = false
+format = '\(([+$added]($added_style) )([-$deleted]($deleted_style))\) '
+added_style = "green"
+deleted_style = "red"
+
+[memory_usage]
+disabled = false
+threshold = 75
+
+[status]
+disabled = false
+format = '[\[$status\]]($style) '
+
+[time]
+disabled = false
+format = "[$time]($style) "
+use_12hr = true
+style = "white"
+
+[cmd_duration]
+min_time = 1_000
+show_milliseconds = false
+
+[battery]
+format = "[$percentage]($style) "
+
+[[battery.display]]
+threshold = 30
+style = "bold red"
+
+[[battery.display]]
+threshold = 50
+style = "bold yellow"
