@@ -1,0 +1,5 @@
+" mustache and handlebars mode for vim
+
+Plug 'mustache/vim-mustache-handlebars'
+
+" vim:ft=vim
