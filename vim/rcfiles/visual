@@ -10,12 +10,11 @@ set splitright
 " Highlight current row under cursor
 set cursorline
 
+" 24 bit color in vim
+set termguicolors
+
 " Color scheme
 colorscheme onedark
 
-" 24 bit color
-set termguicolors
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " vim:ft=vim
