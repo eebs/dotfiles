@@ -11,6 +11,12 @@ error_symbol = "[>](bold red)"
 [directory]
 style = "blue"
 
+[git_status]
+disabled = true
+
+[git_state]
+disabled = true
+
 [git_branch]
 symbol = ""
 
@@ -25,11 +31,11 @@ disabled = false
 threshold = 75
 
 [status]
-disabled = false
+disabled = true
 format = '[\[$status\]]($style) '
 
 [time]
-disabled = false
+disabled = true
 format = "[$time]($style) "
 use_12hr = true
 style = "white"
