@@ -75,7 +75,7 @@
 [gitsh]
   defaultcommand = status -sb
   nogreeting = true
-  prompt = "\n%D %c(%b%#)%w >"
+  prompt = "\n%D %c(%b%#)%w →"
 [secrets]
   providers = git secrets --aws-provider
   patterns = (A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}
