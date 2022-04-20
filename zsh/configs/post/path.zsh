@@ -1,10 +1,13 @@
-# ensure dotfiles bin directory is loaded first
-PATH="$HOME/.bin:/usr/local/sbin:$PATH"
+# Load homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Load asdf
-. "$HOME/.asdf/asdf.sh"
+source $(brew --prefix asdf)/asdf.sh
 
-# mkdir .git/safe in the root of repositories you trust
+# Add dotfiles bin path
+PATH="$HOME/.bin:$PATH"
+
+# Add project bin paths if they are trusted
 PATH=".git/safe/../../bin:$PATH"
 
 export -U PATH
