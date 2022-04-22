@@ -124,6 +124,7 @@ brew "git-secrets"
 brew "neovim"
 brew "battery"
 brew "starship"
+brew "overmind"
 
 # Heroku
 brew "heroku/brew/heroku"
