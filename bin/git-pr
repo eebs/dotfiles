@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -e
+
+if [[ "$(git rev-list --count $(git symbolic-ref --short refs/remotes/origin/HEAD | sed 's@^origin/@@')..HEAD)" == "1" ]]; then
+  git push --force-with-lease && gh pr create --fill "$@"
+else
+  echo "Multiple commits..."
+  git push --force-with-lease && gh pr create "$@"
+fi
