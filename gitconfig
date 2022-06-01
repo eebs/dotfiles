@@ -33,6 +33,7 @@
   rs = rebase --skip
   s = switch
   sc = switch -c
+  sh = shalector
   sl = log --oneline -20
   sla = log --oneline --graph --all -20
   slap = log --oneline --graph --all
