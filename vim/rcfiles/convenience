@@ -40,7 +40,7 @@ nnoremap 0 ^
 nnoremap ^ 0
 
 " Closing of QuickFix or Preview windows
-nmap <Leader>w :cclose<cr>:pclose<cr>:call coc#util#float_hide()<cr>
+nmap <Leader>w :cclose<cr>:pclose<cr>
 
 " Indent all lines
 map <Leader>i mmgg=G`m
