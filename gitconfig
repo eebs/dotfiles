@@ -19,6 +19,7 @@
   ci = commit -v
   cne = commit --amend --no-edit
   co = checkout
+  cp = commit -p -v
   cpr = !git close-pull-request
   dic = diff --cached
   lbs = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/heads
