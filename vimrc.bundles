@@ -41,5 +41,8 @@ call s:SourceConfigFilesIn('rcplugins')
 " See configuration in config/nvim/init.vim
 Plug 'neovim/nvim-lspconfig'
 Plug 'alexaandru/nvim-lspupdate'
+Plug 'folke/lsp-colors.nvim'
+Plug 'folke/trouble.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
 
 call plug#end()
