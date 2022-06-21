@@ -104,7 +104,10 @@ lua << END
       formatters = {
         standardrb = {
           command = "standardrb",
-          args = { "--fix" },
+          args = {
+            "--fix",
+            "%file"
+          },
           rootPatterns = { ".git" },
           doesWriteToFile = true
         }
