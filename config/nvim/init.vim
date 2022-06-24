@@ -21,6 +21,8 @@ autocmd VimEnter * TroubleRefresh
 nnoremap <Leader>o <cmd>TroubleToggle document_diagnostics<CR>
 
 lua << END
+  require("lspconfig").tsserver.setup{}
+  require("lspconfig").cssls.setup{}
   require("lspconfig").solargraph.setup{
     useBundler = true;
     init_options = {
@@ -32,12 +34,69 @@ lua << END
       }
     }
   }
+
   require("lspconfig").diagnosticls.setup{
     filetypes = {
       "ruby",
+      "typescript",
+      "typescriptreact",
+      "javascript",
+      "css",
+      "scss",
     },
     init_options = {
       linters = {
+        eslint = {
+          command = "eslint",
+          rootPatterns = { ".git" },
+          debounce = 100,
+          args = {
+            "--stdin",
+            "--stdin-filename",
+            "%filepath",
+            "--format",
+            "json"
+          },
+          sourceName = "eslint",
+          parseJson = {
+            errorsRoot = "[0].messages",
+            line = "line",
+            column = "column",
+            endLine = "endLine",
+            endColumn = "endColumn",
+            message = "[eslint] ${message} [${ruleId}]",
+            security = "severity"
+          },
+          securities = {
+            [2] = "error",
+            [1] = "warning"
+          }
+        },
+        stylelint = {
+          command = "stylelint",
+          rootPatterns = {
+            ".git"
+          },
+          debounce = 100,
+          args = {
+            "--formatter",
+            "json",
+            "--stdin-filename",
+            "%filepath"
+          },
+          sourceName = "stylelint",
+          parseJson = {
+            errorsRoot = "[0].warnings",
+            line = "line",
+            column = "column",
+            message = "${text}",
+            security = "severity"
+          },
+          securities = {
+            error = "error",
+            warning = "warning"
+          }
+        },
         rubocop = {
           command = "rubocop",
           rootPatterns = { ".git" },
@@ -100,7 +159,12 @@ lua << END
         },
       },
       filetypes = {
-        ruby = "standardrb"
+        ruby = "standardrb",
+        javascript = "eslint",
+        typescript = "eslint",
+        typescriptreact = "eslint",
+        css = "stylelint",
+        scss = "stylelint",
       },
       formatters = {
         standardrb = {
@@ -111,10 +175,27 @@ lua << END
           },
           rootPatterns = { ".git" },
           doesWriteToFile = true
+        },
+        prettierEslint = {
+          command = "prettier-eslint",
+          args = { "--stdin" },
+          rootPatterns = { ".git" },
+        },
+        prettier = {
+          command = "prettier",
+          args = { "--stdin-filepath", '%filename' }
         }
       },
       formatFiletypes = {
-        ruby = "standardrb"
+        ruby = "standardrb",
+        css = "prettier",
+        javascript = "prettier",
+        javascriptreact = "prettier",
+        json = "prettier",
+        scss = "prettier",
+        typescript = "prettier",
+        typescriptreact = "prettier"
+
       }
     }
   }
