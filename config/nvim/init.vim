@@ -23,6 +23,8 @@ nnoremap <Leader>o <cmd>TroubleToggle document_diagnostics<CR>
 lua << END
   require("lspconfig").tsserver.setup{}
   require("lspconfig").cssls.setup{}
+  require("lspconfig").jsonls.setup{}
+  require("lspconfig").vimls.setup{}
   require("lspconfig").solargraph.setup{
     useBundler = true;
     init_options = {
