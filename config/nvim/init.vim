@@ -43,6 +43,7 @@ lua << END
       "javascript",
       "css",
       "scss",
+      "markdown",
     },
     init_options = {
       linters = {
@@ -157,6 +158,32 @@ lua << END
             info = "info"
           }
         },
+        vale = {
+          command = "vale",
+          debounce = 100,
+          args = {
+            "--no-exit",
+            "--output",
+            "JSON",
+            "--ext",
+            ".md",
+          },
+          sourceName = "vale",
+          parseJson = {
+            errorsRoot = "stdin.md",
+            line = "Line",
+            column = "Span[0]",
+            endLine = "Line",
+            endColumn = "Span[1]",
+            message = "[${Check}] ${Message}",
+            security = "Severity"
+          },
+          securities = {
+            error = "error",
+            warning = "warning",
+            suggestion = "info",
+          },
+        },
       },
       filetypes = {
         ruby = "standardrb",
@@ -165,6 +192,7 @@ lua << END
         typescriptreact = "eslint",
         css = "stylelint",
         scss = "stylelint",
+        markdown = "vale"
       },
       formatters = {
         standardrb = {
