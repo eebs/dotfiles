@@ -1,20 +1,18 @@
-" Unmap quicker window movement, this is now handled in tmux.conf via
-" vim-tmux-navigator
-" unmap <C-j>
-" unmap <C-k>
-" unmap <C-h>
-" unmap <C-l>
-
-" " Quicker window movement
-" nnoremap <C-j> <C-w>j
-" nnoremap <C-k> <C-w>k
-" nnoremap <C-h> <C-w>h
-" nnoremap <C-l> <C-w>l
-
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
+
+" Don't let netrw override <C-l> to move between tmux panes
+" https://github.com/christoomey/vim-tmux-navigator/issues/189
+augroup netrw_mapping
+  autocmd!
+  autocmd filetype netrw call NetrwMapping()
+augroup END
+
+function! NetrwMapping()
+  nnoremap <silent> <buffer> <c-l> :TmuxNavigateRight<CR>
+endfunction
 
 " vim:ft=vim
