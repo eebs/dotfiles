@@ -54,4 +54,6 @@ nmap <Leader>cb :%bd!<cr>
 " Checktime to reload all buffers if they were changed outside of vim
 nmap <Leader>tt :checktime<cr>
 
+nmap <Leader>gib :Git blame<cr>
+
 " vim:ft=vim
