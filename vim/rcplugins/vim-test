@@ -7,4 +7,7 @@ nnoremap <silent> <Leader>l :TestLast<CR>
 nnoremap <silent> <Leader>a :TestSuite<CR>
 nnoremap <silent> <Leader>gt :TestVisit<CR>
 
+" Make test commands execute using dispatch.vim
+let test#strategy = "dispatch"
+
 " vim:ft=vim
