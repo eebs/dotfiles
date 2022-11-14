@@ -13,6 +13,8 @@ set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
 
+set scrolloff=4
+
 " Set shorter for vim-gitgutter
 set updatetime=100
 
