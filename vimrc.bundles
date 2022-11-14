@@ -26,6 +26,7 @@ Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/tComment'
 Plug 'nelstrom/vim-visual-star-search'
+Plug 'ggandor/leap.nvim'
 
 function! s:SourceConfigFilesIn(directory)
   let directory_splat = '~/.vim/' . a:directory . '/*'

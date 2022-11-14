@@ -20,6 +20,8 @@ sign define DiagnosticSignHint text= texthl=DiagnosticSignHint linehl= numhl=
 autocmd VimEnter * TroubleRefresh
 nnoremap <Leader>o <cmd>TroubleToggle document_diagnostics<CR>
 
+lua require('leap').add_default_mappings()
+
 lua << END
   require("lspconfig").tsserver.setup{}
   require("lspconfig").cssls.setup{}
