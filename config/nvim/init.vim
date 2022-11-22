@@ -22,6 +22,10 @@ nnoremap <Leader>o <cmd>TroubleToggle document_diagnostics<CR>
 
 lua require('leap').add_default_mappings()
 
+lua << EOF
+  require("nvim-autopairs").setup {}
+EOF
+
 lua << END
   require("lspconfig").tsserver.setup{}
   require("lspconfig").cssls.setup{}
