@@ -126,6 +126,7 @@ brew "neovim"
 brew "battery"
 brew "starship"
 brew "overmind"
+brew "lucky-commit"
 
 # Heroku
 brew "heroku/brew/heroku"
