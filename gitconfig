@@ -15,6 +15,7 @@
   aa = add --all
   ap = add --patch
   ca = commit --amend
+  ce = commit --allow-empty
   cf = commit --fixup
   ci = commit -v
   cne = commit --amend --no-edit
