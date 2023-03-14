@@ -4,6 +4,6 @@ _not_inside_tmux() {
 
 ensure_tmux_is_running() {
   if _not_inside_tmux; then
-    tat
+    tat home
   fi
 }
