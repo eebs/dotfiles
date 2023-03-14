@@ -1,0 +1,53 @@
+{
+  "spec/*_spec.rb": {
+    "command": "spec",
+    "template": [
+      "RSpec.describe {camelcase|capitalize|colons} do",
+      "end"
+    ]
+  },
+  "spec/models/*_spec.rb": {
+    "command": "spec",
+    "alternate": "app/models/{}.rb",
+    "template": [
+      "RSpec.describe {camelcase|capitalize|colons}, type: :model do",
+      "  describe \"\" do",
+      "  end",
+      "end"
+    ]
+  },
+  "spec/requests/*_spec.rb": {
+    "command": "request",
+    "alternate": "app/controllers/{}_controller.rb",
+    "template": [
+      "RSpec.describe \"{camelcase|capitalize|colons} requests\", type: :request do",
+      "  describe \"\" do",
+      "  end",
+      "end"
+    ]
+  },
+  "spec/system/*_spec.rb": {
+    "command": "system",
+    "template": [
+      "RSpec.describe \"\", type: :system do",
+      "  scenario \"\" do",
+      "  end",
+      "end"
+    ]
+  },
+  "spec/factories/*_factory.rb": {
+    "command": "factory",
+    "affinity": "model",
+    "alternate": "app/models/{}.rb",
+    "test": "spec/models/{}_spec.rb",
+    "template": [
+      "FactoryBot.define do",
+      "  factory :{underscore} do",
+      "  end",
+      "end"
+    ]
+  },
+  "spec/spec_helper.rb": { "command": "spechelper" },
+  "spec/rails_helper.rb": { "command": "railshelper" },
+  "spec/support/*.rb": { "command": "support" }
+}

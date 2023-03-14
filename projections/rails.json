@@ -1,0 +1,69 @@
+{
+  "app/models/*.rb": {
+    "command": "model",
+    "alternate": "app/serializers/{}_serializer.rb",
+    "template": [
+      "class {camelcase|capitalize|colons}",
+      "end"
+    ],
+    "test": [
+      "spec/models/{}_spec.rb"
+    ]
+  },
+  "app/services/*.rb": {
+    "command": "service",
+    "template": [
+      "class {camelcase|capitalize|colons}",
+      "end"
+    ],
+    "test": [
+      "spec/services/{}_spec.rb"
+    ]
+  },
+  "app/controllers/*_controller.rb": {
+    "command": "controller",
+    "template": [
+      "class {camelcase|capitalize|colons}Controller < ApplicationController",
+      "end"
+    ],
+    "test": [
+      "spec/requests/{}_spec.rb",
+      "spec/controllers/{}_spec.rb"
+    ]
+  },
+  "app/jobs/*.rb": {
+    "command": "job",
+    "template": [
+      "class {camelcase|capitalize|colons} < ApplicationJob",
+      "end"
+    ],
+    "test": [
+      "spec/jobs/{}_spec.rb"
+    ]
+  },
+  "app/serializers/*_serializer.rb": {
+    "command": "serializer",
+    "affinity": "model",
+    "template": [
+      "class {camelcase|capitalize|colons}Serializer < ActiveModel::Serializer",
+      "end"
+    ],
+    "test": [
+      "spec/serializers/{}_serializer_spec.rb"
+    ]
+  },
+  "app/components/*_component.rb": {
+    "command": "component",
+    "template": [
+      "class {camelcase|capitalize|colons}Component < ViewComponent::Base",
+      "end"
+    ],
+    "alternate": [
+      "app/components/{}_component.html.erb"
+    ],
+    "test": [
+      "spec/components/{}_component_spec.rb"
+    ]
+  },
+  "config/routes.rb": {"command": "routes"}
+}

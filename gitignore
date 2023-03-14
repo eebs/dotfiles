@@ -7,6 +7,7 @@
 .aws
 .git/
 .vimrc.local
+.projections.json
 /bower_components/
 /log
 /node_modules/

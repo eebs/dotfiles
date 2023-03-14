@@ -1,0 +1,9 @@
+{
+  "*.gemspec": {
+    "type": "gemspec"
+  },
+  "lib/*.rb": {
+    "type": "lib",
+    "test": "spec/{}_spec.rb"
+  }
+}

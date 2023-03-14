@@ -30,6 +30,13 @@ projects() {
   _cdpath_directories $1 | _is_a_git_repo
 }
 
+function chpwd {
+  local v; v=$(projections)
+  if [[ $? -eq 0 ]]; then
+    echo $v > .projections.json
+  fi
+}
+
 tm-select-session() {
   project=$(projects | fzf --reverse)
   if [ ! -z "$project" ]; then
