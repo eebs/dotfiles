@@ -43,6 +43,7 @@
   st = status
   su = stash -u
   up = !git fetch origin && git rebase origin/master
+  upd = !git fetch origin && git rebase origin/develop
   wip = !git add -A && git commit -m "wip"
 [core]
   excludesfile = ~/.gitignore
