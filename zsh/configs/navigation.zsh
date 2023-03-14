@@ -35,6 +35,8 @@ function chpwd {
   if [[ $? -eq 0 ]]; then
     echo $v > .projections.json
   fi
+
+  ls
 }
 
 tm-select-session() {
