@@ -1,7 +1,6 @@
 {
   "app/models/*.rb": {
     "command": "model",
-    "alternate": "app/serializers/{}_serializer.rb",
     "template": [
       "class {camelcase|capitalize|colons}",
       "end"
