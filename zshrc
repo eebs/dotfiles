@@ -39,3 +39,5 @@ _load_settings "$HOME/.zsh/configs"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 ensure_tmux_is_running
+
+eval "$(starship init zsh)"
