@@ -1,0 +1,5 @@
+#!/bin/sh
+
+set -e
+
+git switch -c 🐧/ek/"$@"
