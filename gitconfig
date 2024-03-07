@@ -18,6 +18,7 @@
   ce = commit --allow-empty
   cf = commit --fixup
   ci = commit -v
+  cm = commit -m
   cne = commit --amend --no-edit
   co = checkout
   cp = commit -p -v
