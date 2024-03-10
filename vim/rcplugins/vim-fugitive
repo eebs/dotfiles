@@ -1,6 +1,0 @@
-Plug 'tpope/vim-fugitive'
-
-" Set tags for vim-fugitive
-set tags^=.git/tags
-
-" vim:ft=vim

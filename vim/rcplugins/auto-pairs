@@ -1,5 +1,0 @@
-"  insert or delete brackets, parens, quotes in pair
-
-Plug 'windwp/nvim-autopairs'
-
-" vim:ft=vim
