@@ -1,5 +1,0 @@
-if filereadable(".git/safe/../../.vimrc.local")
-  source .git/safe/../../.vimrc.local
-endif
-
-" vim:ft=vim

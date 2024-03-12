@@ -1,8 +1,0 @@
-" Dash.app integration
-
-Plug 'rizzatti/dash.vim'
-
-nmap <silent> <leader>dk <Plug>DashSearch
-nnoremap <leader>df :Dash<Space>
-
-" vim:ft=vim
