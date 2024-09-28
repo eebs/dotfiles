@@ -1,3 +1,2 @@
 EXCLUDES="README*.md LICENSE laptop-setup"
-DOTFILES_DIRS="$HOME/dotfiles-local"
 COPY_ALWAYS="git_template/HEAD"
