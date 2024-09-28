@@ -1,28 +1,5 @@
-# Unix
-alias ll="ls -al"
-alias ln="ln -v"
-alias mkdir="mkdir -p"
-alias e="$EDITOR"
-alias v="$VISUAL"
-
-# Bundler
-alias b="bundle"
-
-# Rails
-alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
-alias s="rspec"
-
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
-
-# Git shortcuts
-alias gdr="git diff-tree --diff-filter=d -r --no-commit-id --name-only origin/master head | xargs"
-
-# Laptop
-alias macup="sh ~/code/thoughtbot/laptop/mac 2>&1 | tee ~/laptop.log"
-
-# GPG
-alias gpg="gpg2"
 
 # Trust a repository
 alias trust="mkdir -p .git/safe"

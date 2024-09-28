@@ -4,7 +4,7 @@ unsetopt auto_cd
 cdpath=(
   $HOME/code \
   $HOME/code/eebs \
-  $HOME/code/work/current \
+  $HOME/code/ynab \
   $HOME
 )
 
