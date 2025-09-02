@@ -2,7 +2,7 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Load asdf
-source $(brew --prefix asdf)/libexec/asdf.sh
+PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 # Add global npm path
 PATH="$(npm config get prefix)/bin:$PATH"
