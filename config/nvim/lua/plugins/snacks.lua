@@ -42,5 +42,8 @@ return {
     { "<leader>fb",       function() Snacks.picker.buffers() end,     desc = "Buffers" },
     { "<leader>fg",       function() Snacks.picker.grep() end,        desc = "Grep Files" },
     { "<C-n>",            function() Snacks.explorer() end,           desc = "Explorer" },
+    { "<leader>bd",       function() Snacks.bufdelete() end,          desc = "Delete Buffer" },
+    { "<leader>bD",       "<cmd>:bd<cr>",                             desc = "Delete Buffer and Window" },
+    { "<leader>bo",       function() Snacks.bufdelete.other() end,    desc = "Delete Other Buffers" },
   }
 }
