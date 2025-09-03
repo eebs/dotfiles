@@ -1,3 +1,4 @@
+[general]
 import = [ "~/.config/alacritty/catppuccin-mocha.toml" ]
 
 [font]
@@ -9,9 +10,9 @@ family = "FiraCode Nerd Font"
 [selection]
 save_to_clipboard = true
 
-[shell]
-args = ["--login"]
+[terminal.shell]
 program = "/bin/zsh"
+args = ["--login"]
 
 [window]
 startup_mode = "Maximized"
