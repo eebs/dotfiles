@@ -14,5 +14,14 @@ vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
 vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
 vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 
+-- Move between wrapped lines, rather than jumping over wrapped segments
+vim.keymap.set('n', 'j', 'gj')
+vim.keymap.set('n', 'k', 'gk')
+
+-- Quick escape back to normal mode
+vim.keymap.set('i', 'jk', '<esc>')
+vim.keymap.set('i', 'kj', '<esc>')
+vim.keymap.set('i', 'jj', '<esc>')
+
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 vim.wo.number = true
