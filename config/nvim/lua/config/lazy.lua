@@ -22,7 +22,6 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 require("config.options")
-require("config.keymaps")
 
 -- Setup lazy.nvim
 require("lazy").setup({
@@ -36,3 +35,5 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
+
+require("config.keymaps")
