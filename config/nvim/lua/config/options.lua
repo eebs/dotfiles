@@ -1,56 +1,68 @@
--- vim.g.lazyvim_ruby_lsp = "ruby_lsp"
--- vim.g.lazyvim_ruby_formatter = "standardrb"
+local opt = vim.opt
 
-vim.cmd("set nobackup")
-vim.cmd("set nowritebackup")
-vim.cmd("set noswapfile")
-vim.cmd("set ruler")
-vim.cmd("set showcmd")
-vim.cmd("set incsearch")
-vim.cmd("set laststatus=2")
-vim.cmd("set autowrite")
+opt.autowrite = true -- Enable auto write
+opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus" -- Sync with system clipboard
+opt.completeopt = "menu,menuone,noselect"
+opt.conceallevel = 2 -- Hide * markup for bold and italic, but not markers with substitutions
+opt.confirm = true -- Confirm to save changes before exiting modified buffer
+opt.cursorline = true -- Enable highlighting of the current line
+opt.expandtab = true -- Use spaces instead of tabs
+opt.fillchars = {
+  foldopen = "",
+  foldclose = "",
+  fold = " ",
+  foldsep = " ",
+  diff = "╱",
+  eob = " ",
+}
+opt.foldlevel = 99
+opt.formatoptions = "jcroqlnt"
+opt.grepprg = "rg --vimgrep"
+opt.ignorecase = true -- Ignore case
+opt.inccommand = "nosplit" -- preview incremental substitute
+opt.jumpoptions = "view"
+opt.laststatus = 3 -- global statusline
+opt.linebreak = true -- Wrap lines at convenient points
+opt.list = true -- Show some invisible characters (tabs...
+opt.mouse = "a" -- Enable mouse mode
+opt.number = true -- Print line number
+opt.pumblend = 10 -- Popup blend
+opt.pumheight = 10 -- Maximum number of entries in a popup
+opt.relativenumber = true -- Relative line numbers
+opt.ruler = false -- Disable the default ruler
+opt.scrolloff = 4 -- Lines of context
+opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "help", "globals", "skiprtp", "folds" }
+opt.shiftround = true -- Round indent
+opt.shiftwidth = 2 -- Size of an indent
+opt.shortmess:append({ W = true, I = true, c = true, C = true })
+opt.showmode = false -- Dont show mode since we have a statusline
+opt.sidescrolloff = 8 -- Columns of context
+opt.signcolumn = "yes" -- Always show the signcolumn, otherwise it would shift the text each time
+opt.smartcase = true -- Don't ignore case with capitals
+opt.smartindent = true -- Insert indents automatically
+opt.smoothscroll = true
+opt.spelllang = { "en" }
+opt.splitbelow = true -- Put new windows below current
+opt.splitkeep = "screen"
+opt.splitright = true -- Put new windows right of current
+-- opt.statuscolumn = [[%!v:lua.require'snacks.statuscolumn'.get()]]
+opt.swapfile = false
+opt.tabstop = 2 -- Number of spaces tabs count for
+opt.termguicolors = true -- True color support
+opt.timeoutlen = vim.g.vscode and 1000 or 300 -- Lower than default (1000) to quickly trigger which-key
+opt.undofile = true
+opt.undolevels = 10000
+opt.updatetime = 100 -- Save swap file and trigger CursorHold
+opt.virtualedit = "block" -- Allow cursor to move where there is no text in visual block mode
+opt.wildmode = "longest:full,full" -- Command-line completion mode
+opt.winminwidth = 5 -- Minimum window width
+opt.wrap = false -- Disable line wrap
 
-vim.cmd("set scrolloff=4")
-
-vim.cmd("set updatetime=100")
-
-vim.cmd("set expandtab")
-vim.cmd("set shiftround")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")
-
-vim.cmd("set textwidth=80")
-vim.cmd("set colorcolumn=+1")
-
-vim.cmd("set splitbelow")
-vim.cmd("set splitright")
-
-vim.cmd("set cursorline")
-
-vim.opt.swapfile = false
-
--- Navigate vim panes better
-vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
-vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
-vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
-vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
-
--- Move between wrapped lines, rather than jumping over wrapped segments
-vim.keymap.set('n', 'j', 'gj')
-vim.keymap.set('n', 'k', 'gk')
-
--- Quick escape back to normal mode
-vim.keymap.set('i', 'jk', '<esc>')
-vim.keymap.set('i', 'kj', '<esc>')
-vim.keymap.set('i', 'jj', '<esc>')
-
--- Write file
-vim.keymap.set('n', '<leader>j', ':w<cr>')
-
--- Jump to first non-whitespace character insteaad of start of line
-vim.keymap.set('n', '0', '^', { noremap = true })
-vim.keymap.set('n', '^', '0', { noremap = true })
-
-vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
-vim.wo.number = true
+-- vim.cmd("set nobackup")
+-- vim.cmd("set nowritebackup")
+-- vim.cmd("set noswapfile")
+-- vim.cmd("set showcmd")
+-- vim.cmd("set incsearch")
+-- vim.cmd("set softtabstop=2")
+-- vim.cmd("set textwidth=80")
+-- vim.cmd("set colorcolumn=+1")
