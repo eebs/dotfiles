@@ -22,7 +22,12 @@ return {
         ]],
       },
     },
-    indent = { enabled = true },
+    indent = {
+      enabled = true,
+      animate = {
+        duration = 0,
+	    },
+    },
     input = { enabled = true },
     git = { enabled = true },
     picker = { enabled = true },
