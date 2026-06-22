@@ -22,6 +22,6 @@ PATH="$HOME/.bin:$PATH"
 # Add project bin paths if they are trusted
 PATH=".git/safe/../../bin:$PATH"
 
-PATH="/Applications/Postgres.app/Contents/Versions/17/bin:$PATH"
+PATH="/Applications/Postgres.app/Contents/Versions/18/bin:$PATH"
 
 export -U PATH
