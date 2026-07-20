@@ -13,4 +13,4 @@ export -U PATH
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Load Mise
-eval "$(~/.local/bin/mise activate zsh)"
+eval "$(/opt/homebrew/bin/mise activate zsh)"
